@@ -42,7 +42,7 @@ class TelegramPolling extends Command
 
     public function getUpdate($offset): array
     {
-        $url = "https://api.telegram.org/bot". config('services.telegram.api_key')."/getupdates?offset={$offset}";
+        $url = "https://api.telegram.org/bot".config('services.telegram.api_key')."/getupdates?offset={$offset}";
         $response = Http::send('GET',$url);
         return $response->json()['result'];
     }
