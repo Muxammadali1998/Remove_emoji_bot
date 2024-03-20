@@ -20,7 +20,6 @@ class TelegramController extends Controller
         $input = $request->all();
 
 
-        dd($input);
         if(isset($input['message'])){
 
         $message = $input['message'];

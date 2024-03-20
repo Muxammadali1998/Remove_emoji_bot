@@ -22,4 +22,4 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/bot',(new \App\Http\Controllers\TelegramController())->hendel());
+Route::get('/bot',[\App\Http\Controllers\TelegramController::class, 'hendel']);
